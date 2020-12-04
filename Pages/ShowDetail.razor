@@ -1,0 +1,110 @@
+﻿@page "/showdetail/{Title}"
+@using MyShowWatch.Shared
+@using System.Linq
+@inject HttpClient Http
+
+<h1 class="page-title">Details for @Show.Title</h1>
+
+
+<div class="col-12 row">
+    @*MAYBE FIND A NICE IMAGE TO USE HERE TO MAKE IT MORE APPEALING
+        <div class="col-2">
+        <img src="@($"https://gillcleerenpluralsight.blob.core.windows.net/person/{Employee.EmployeeId}.jpg")" class="img-responsive rounded-circle employee-detail-img" />
+    </div>*@
+    <div class="col-10 row">
+        <div class="col-xs-12 col-sm-8">
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label">Show Title</label>
+                <div class="col-sm-8">
+                    <label type="text" class="form-control-plaintext">@Show.Title</label>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label">Type of Show</label>
+                <div class="col-sm-8">
+                    <label type="text" readonly class="form-control-plaintext">@Show.ShowType</label>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label">Status</label>
+                <div class="col-sm-8">
+                    <label type="text" readonly class="form-control-plaintext">@Show.Status</label>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label">Release Date</label>
+                <div class="col-sm-8">
+                    @if (Show.ReleaseDate == null  && Show.Status == Status.NoReleaseDate)
+                    {
+                        <label type="text" readonly class="form-control-plaintext">Still waiting for the release date!</label>
+                    }
+                    else
+                    {
+                <label type="text" readonly class="form-control-plaintext">@Show.ReleaseDate?.ToShortDateString()</label>
+                    }
+
+                    <label type="text" readonly class="form-control-plaintext">@Show.ReleaseDate?.ToShortDateString()</label>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label">For the kids too?</label>
+                <div class="col-sm-8">
+
+                    @if (Show.IsKidFriendly)
+                    {
+                        <label type="text" readonly class="form-control-plaintext">Yes</label>
+                    }
+                    else
+                    {
+                        <label type="text" readonly class="form-control-plaintext">No</label>
+                    }
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label">Latest season:</label>
+                <div class="col-sm-8">
+                    <label type="text" readonly class="form-control-plaintext">@Show.LatestSeason</label>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label">Number of Episodes:</label>
+                <div class="col-sm-8">
+                    <label type="text" readonly class="form-control-plaintext">@Show.NumEpisodes</label>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label">Description</label>
+                <div class="col-sm-8">
+                    <label type="text" readonly class="form-control-plaintext">@Show.Description</label>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@code {
+
+    [Parameter]
+    public String Title { get; set; }
+
+    // for getting show details - REMOVE COMMENT BEFORE SUBMITTING
+    public Show Show { get; set; } = new Show();
+
+    private Show[] shows;
+
+    protected override async Task OnInitializedAsync()
+    {
+        shows = await Http.GetFromJsonAsync<Show[]>("Show");
+
+
+        Show = shows.FirstOrDefault(s => s.Title.ToLower() == Title.ToLower());
+    }
+
+}
