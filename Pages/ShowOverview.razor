@@ -20,16 +20,22 @@ else
                 <th>Show Type</th>
                 <th>Where it's at</th>
                 <th></th>
+
             </tr>
         </thead>
         <tbody>
             @foreach (var show in shows)
             {
-                <tr>
-                    <td>@show.Title</td>
-                    <td>@show.Status</td>
-                    <td>@show.ShowType</td>
-                </tr>
+            <tr>
+                <td>@show.Title</td>
+                <td>@show.Status</td>
+                <td>@show.ShowType</td>
+                <td>
+                    <a href="@($"showdetail/{show.Title}")" class="btn btn-primary table-btn">
+                        <i class="fas fa-info-circle"></i>
+                    </a>
+                </td>
+            </tr>
             }
         </tbody>
     </table>
