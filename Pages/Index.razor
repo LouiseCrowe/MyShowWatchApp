@@ -1,0 +1,51 @@
+﻿@page "/"
+@using MyShowWatch.Shared
+@using Microsoft.AspNetCore.Components
+@inject HttpClient Http
+
+<h1 class="page-title">MyShowWatch keeping track of all your shows!</h1>
+
+<div class="form-group has-search">
+    <span class="fa fa-search form-control-feedback"></span>
+    <input type="text" class="form-control" placeholder="Type in the show title to search for details">
+</div>
+
+<div class="card-deck">
+    <div class="card bg-primary">
+        <div class="card-body">
+            <h4 class="card-title">All Shows</h4>
+            <p class="card-text">
+                Not sure what you feel like watching?
+                Have a look through the complete list.
+            </p>
+            <a href="allshows" class="btn btn-primary stretched-link">All Shows</a>
+        </div>
+    </div>
+    <div class="card bg-warning">
+        <div class="card-body">
+            <h4 class="card-title">TV Shows</h4>
+            <p class="card-text">
+                Which TV show would you like to catch up on?
+            </p>
+            <a href="alltvshows" class="btn btn-primary stretched-link">TV Shows</a>
+        </div>
+    </div>
+    <div class="card bg-success">
+        <div class="card-body">
+            <h4 class="card-title">Movies</h4>
+            <p class="card-text">
+                Grab the popcorn and pick a movie!
+            </p>
+            <a href="allmovies" class="btn btn-primary stretched-link">Movies</a>
+        </div>
+    </div>
+    <div class="card bg-danger">
+        <div class="card-body">
+            <h4 class="card-title">Documentaries</h4>
+            <p class="card-text">
+                What documentary are you interested in today?
+            </p>
+            <a href="documentaries" class="btn btn-primary stretched-link">Documentaries</a>
+        </div>
+    </div>
+</div>

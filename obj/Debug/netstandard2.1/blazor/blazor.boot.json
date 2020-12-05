@@ -6,7 +6,7 @@
   "linkerEnabled": false,
   "resources": {
     "assembly": {
-      "MyShowWatch.Client.dll": "sha256-T8J2I83KAUdI3hI7dom2E93HauDbIQR2gXIePHl9DGM=",
+      "MyShowWatch.Client.dll": "sha256-E+gWukayWyXwEy1OOuJN+QnivP4wfkBHBgEQzTOfCc0=",
       "System.Net.Http.Json.dll": "sha256-99dseBOagY3mzu5Y8Eqm8gRI+o8QbbCp7R2Ew9bQ+5E=",
       "System.Buffers.dll": "sha256-ZxXy75PYbzJxNfAc\/SAP1nUYm4gt1jSaOpFnBb9m85M=",
       "mscorlib.dll": "sha256-BaZPMj95+YNe3G4ckTGD6szZFwZeA2MOHn91zTGKDeU=",
@@ -61,7 +61,7 @@
       "Microsoft.JSInterop.WebAssembly.dll": "sha256-czNf3btAeBW\/vvID5LAfgcsNZ+GM3ssVuPaMflcg0rs="
     },
     "pdb": {
-      "MyShowWatch.Client.pdb": "sha256-asDPO3i8DOkjIGFupUkb47z9R\/w1nJBgHiR8O+XUvYs=",
+      "MyShowWatch.Client.pdb": "sha256-8Fuob65PGwBqQrlW4kLlkmHK6st4OnKOlGuusKwdOL4=",
       "MyShowWatch.Shared.pdb": "sha256-3C8yeteVrdy5UGtMcz3qj0WqWl9dbXEpW+mWTlvZdhQ="
     },
     "runtime": {

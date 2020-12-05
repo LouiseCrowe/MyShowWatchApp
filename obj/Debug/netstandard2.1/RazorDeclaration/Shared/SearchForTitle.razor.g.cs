@@ -4,13 +4,14 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace MyShowWatch.Client.Pages
+namespace MyShowWatch.Client.Shared
 {
     #line hidden
     using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
+    using Microsoft.AspNetCore.Components;
 #nullable restore
 #line 1 "C:\BLAZOR\CA3MyShowWatch\MyShowWatch\MyShowWatch\Client\_Imports.razor"
 using System.Net.Http;
@@ -74,45 +75,13 @@ using MyShowWatch.Client.Shared;
 #line default
 #line hidden
 #nullable disable
-#nullable restore
-#line 2 "C:\BLAZOR\CA3MyShowWatch\MyShowWatch\MyShowWatch\Client\Pages\ShowOverview.razor"
-using MyShowWatch.Shared;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 3 "C:\BLAZOR\CA3MyShowWatch\MyShowWatch\MyShowWatch\Client\Pages\ShowOverview.razor"
-using Microsoft.AspNetCore.Components;
-
-#line default
-#line hidden
-#nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/")]
-    public partial class ShowOverview : Microsoft.AspNetCore.Components.ComponentBase
+    public partial class SearchForTitle : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
         {
         }
         #pragma warning restore 1998
-#nullable restore
-#line 44 "C:\BLAZOR\CA3MyShowWatch\MyShowWatch\MyShowWatch\Client\Pages\ShowOverview.razor"
-       
-
-
-    private Show[] shows;
-
-    protected override async Task OnInitializedAsync()
-    {
-        shows = await Http.GetFromJsonAsync<Show[]>("Show");
-    }
-
-
-#line default
-#line hidden
-#nullable disable
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient Http { get; set; }
     }
 }
 #pragma warning restore 1591
