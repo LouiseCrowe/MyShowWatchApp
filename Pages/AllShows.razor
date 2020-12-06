@@ -16,11 +16,8 @@ else
     <table class="table">
         <thead>
             <tr>
-                <th>Title</th>
-                <th>Show Type</th>
-                <th>Where it's at</th>
+                <th>Show Title</th>
                 <th></th>
-
             </tr>
         </thead>
         <tbody>
@@ -28,11 +25,9 @@ else
             {
                 <tr>
                     <td>@show.Title</td>
-                    <td>@show.Status</td>
-                    <td>@show.ShowType</td>
                     <td>
                         <a href="@($"showdetail/{show.Title}")" class="btn btn-primary table-btn">
-                            <i class="fas fa-info-circle">Details</i>
+                            <i class="fas fa-info-circle"></i>
                         </a>
                     </td>
                 </tr>

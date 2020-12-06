@@ -14,38 +14,48 @@
     <div class="col-10 row">
         <div class="col-xs-12 col-sm-8">
             <div class="form-group row">
-                <label class="col-sm-4 col-form-label">Show Title</label>
+                <label class="col-sm-4 col-form-label">Show Title:</label>
                 <div class="col-sm-8">
                     <label type="text" class="form-control-plaintext">@Show.Title</label>
                 </div>
             </div>
             <div class="form-group row">
-                <label class="col-sm-4 col-form-label">Type of Show</label>
+                <label class="col-sm-4 col-form-label">Type of Show:</label>
                 <div class="col-sm-8">
                     <label type="text" readonly class="form-control-plaintext">@Show.ShowType</label>
                 </div>
             </div>
 
             <div class="form-group row">
-                <label class="col-sm-4 col-form-label">Status</label>
+                <label class="col-sm-4 col-form-label">Is this show available?</label>
                 <div class="col-sm-8">
                     <label type="text" readonly class="form-control-plaintext">@Show.Status</label>
                 </div>
             </div>
-
             <div class="form-group row">
-                <label class="col-sm-4 col-form-label">Release Date</label>
+                <label class="col-sm-4 col-form-label">Watched already?</label>
                 <div class="col-sm-8">
-                    @if (Show.ReleaseDate == null  && Show.Status == Status.NoReleaseDate)
+                    @if (Show.IsWatched)
+                    {
+                        <label type="text" readonly class="form-control-plaintext">You've seen this one!</label>
+                    }
+                    else
+                    {
+                        <label type="text" readonly class="form-control-plaintext">You've still got this to look forward to!</label>
+                    }
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label">Release Date:</label>
+                <div class="col-sm-8">
+                    @if (Show.ReleaseDate == null && Show.Status == Status.NoReleaseDate)
                     {
                         <label type="text" readonly class="form-control-plaintext">Still waiting for the release date!</label>
                     }
                     else
                     {
-                <label type="text" readonly class="form-control-plaintext">@Show.ReleaseDate?.ToShortDateString()</label>
+                        <label type="text" readonly class="form-control-plaintext">@Show.ReleaseDate?.ToShortDateString()</label>
                     }
-
-                    <label type="text" readonly class="form-control-plaintext">@Show.ReleaseDate?.ToShortDateString()</label>
                 </div>
             </div>
 
@@ -65,9 +75,17 @@
             </div>
 
             <div class="form-group row">
-                <label class="col-sm-4 col-form-label">Latest season:</label>
+                <label class="col-sm-4 col-form-label">Number of seasons:</label>
                 <div class="col-sm-8">
-                    <label type="text" readonly class="form-control-plaintext">@Show.LatestSeason</label>
+                    <label type="text" readonly class="form-control-plaintext">@Show.NumSeasonsConfirmed</label>
+                </div>
+            </div>
+
+
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label">Latest season available:</label>
+                <div class="col-sm-8">
+                    <label type="text" readonly class="form-control-plaintext">@Show.LatestSeasonAvailable</label>
                 </div>
             </div>
 
@@ -79,7 +97,7 @@
             </div>
 
             <div class="form-group row">
-                <label class="col-sm-4 col-form-label">Description</label>
+                <label class="col-sm-4 col-form-label">Description:</label>
                 <div class="col-sm-8">
                     <label type="text" readonly class="form-control-plaintext">@Show.Description</label>
                 </div>
