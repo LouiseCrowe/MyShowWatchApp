@@ -7,7 +7,7 @@
 
 <p>Here's a list of all your movies!</p>
 
-@if (shows == null)
+@if (movies == null)
 {
     <p><em>Loading...</em></p>
 }
@@ -22,7 +22,7 @@ else
             </tr>
         </thead>
         <tbody>
-            @foreach (var show in shows)
+            @foreach (var show in movies)
             {
                 <tr>
                     <td>@show.Title</td>
@@ -39,12 +39,12 @@ else
 
 @code {
 
+    private Show[] movies;
 
-    private Show[] shows;
 
     protected override async Task OnInitializedAsync()
     {
-        shows = await Http.GetFromJsonAsync<Show[]>("Show");
+        movies = await Http.GetFromJsonAsync<Show[]>("https://localhost:5001/Show/allmovies");
     }
 
 }

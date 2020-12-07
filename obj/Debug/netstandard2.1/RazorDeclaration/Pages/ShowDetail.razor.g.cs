@@ -100,6 +100,12 @@ using System.Linq;
 #line 110 "C:\BLAZOR\CA3MyShowWatch\MyShowWatch\MyShowWatch\Client\Pages\ShowDetail.razor"
        
 
+    // maybe should include try catch for search
+    // at the moment it's fine because the parameter comes from the AllShows page which
+    // will obviously have a valid Title
+    // The title will be a required field as will ShowType
+    
+    
     [Parameter]
     public String Title { get; set; }
 

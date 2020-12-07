@@ -97,15 +97,16 @@ using Microsoft.AspNetCore.Components;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 44 "C:\BLAZOR\CA3MyShowWatch\MyShowWatch\MyShowWatch\Client\Pages\AllDocumentaries.razor"
+#line 40 "C:\BLAZOR\CA3MyShowWatch\MyShowWatch\MyShowWatch\Client\Pages\AllDocumentaries.razor"
        
 
 
-    private Show[] shows;
+    private Show[] documentaries;
 
     protected override async Task OnInitializedAsync()
     {
-        shows = await Http.GetFromJsonAsync<Show[]>("Show");
+        documentaries = await Http.GetFromJsonAsync<Show[]>
+            ("https://localhost:5001/Show/alldocumentaries");
     }
 
 

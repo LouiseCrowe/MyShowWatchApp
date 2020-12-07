@@ -101,11 +101,11 @@ using Microsoft.AspNetCore.Components;
        
 
 
-    private Show[] shows;
+    private Show[] tvshows;
 
     protected override async Task OnInitializedAsync()
     {
-        shows = await Http.GetFromJsonAsync<Show[]>("Show");
+        tvshows = await Http.GetFromJsonAsync<Show[]>("https://localhost:5001/Show/alltvshows");
     }
 
 

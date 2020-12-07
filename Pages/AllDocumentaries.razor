@@ -7,7 +7,7 @@
 
 <p>Here's a list of all your documentaries!</p>
 
-@if (shows == null)
+@if (documentaries == null)
 {
     <p><em>Loading...</em></p>
 }
@@ -17,19 +17,15 @@ else
         <thead>
             <tr>
                 <th>Title</th>
-                <th>Show Type</th>
-                <th>Where it's at</th>
                 <th></th>
 
             </tr>
         </thead>
         <tbody>
-            @foreach (var show in shows)
+            @foreach (var show in documentaries)
             {
                 <tr>
                     <td>@show.Title</td>
-                    <td>@show.Status</td>
-                    <td>@show.ShowType</td>
                     <td>
                         <a href="@($"showdetail/{show.Title}")" class="btn btn-primary table-btn">
                             <i class="fas fa-info-circle"></i>
@@ -44,11 +40,12 @@ else
 @code {
 
 
-    private Show[] shows;
+    private Show[] documentaries;
 
     protected override async Task OnInitializedAsync()
     {
-        shows = await Http.GetFromJsonAsync<Show[]>("Show");
+        documentaries = await Http.GetFromJsonAsync<Show[]>
+            ("https://localhost:5001/Show/alldocumentaries");
     }
 
 }
