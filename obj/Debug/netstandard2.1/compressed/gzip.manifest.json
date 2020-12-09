@@ -1,7 +1,7 @@
 {
   "FilesToCompress": [
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\KuM0nGGR68PQ93sYocKI1eVdWuaWnQ76-p2g7oCRNjw=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\Dz7ZHDV8i_XZuOiv4T9XFjJqmpu8GhIlte3U5j3n-uk=.hash",
       "Source": "C:\\BLAZOR\\CA3MyShowWatch\\MyShowWatch\\MyShowWatch\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\MyShowWatch.Client.dll",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/MyShowWatch.Client.dll.gz"
     },
@@ -191,7 +191,7 @@
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Microsoft.Extensions.Logging.Abstractions.dll.gz"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\arruK7en7MdpJTmloeG2sZJh5BCl8vpvZmPvGlu6mdg=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\xDjeV0T43YQrO6eS531W5gh_jFFDMH7YuVa3jeGBL3Y=.hash",
       "Source": "C:\\BLAZOR\\CA3MyShowWatch\\MyShowWatch\\MyShowWatch\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\MyShowWatch.Shared.dll",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/MyShowWatch.Shared.dll.gz"
     },
@@ -266,12 +266,12 @@
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/Microsoft.JSInterop.WebAssembly.dll.gz"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\Kahyb_M9215etyOxkpAzkk4OaZh2BxG3xNlO_PSwJmg=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\6CwAH9gKgbHBE43jSuM9ANmqwMlNhKlRDxixu1pNGiI=.hash",
       "Source": "C:\\BLAZOR\\CA3MyShowWatch\\MyShowWatch\\MyShowWatch\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\MyShowWatch.Client.pdb",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/MyShowWatch.Client.pdb.gz"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\V9DC1nfMu4QKy3M6HLHU_YhwpwS6SPz67dccF-hCll4=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\-S02OBGAVRgfQ_tlgDJITXTu1irrTg_w2vbHrdVLfhE=.hash",
       "Source": "C:\\BLAZOR\\CA3MyShowWatch\\MyShowWatch\\MyShowWatch\\Client\\obj\\Debug\\netstandard2.1\\blazor\\unlinked\\MyShowWatch.Shared.pdb",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/_bin\/MyShowWatch.Shared.pdb.gz"
     },
@@ -296,7 +296,7 @@
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/blazor.webassembly.js.gz"
     },
     {
-      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\tMRfxbcSx22faL4ecToPuL-Js6Akju5Ad8MSBGSATFs=.hash",
+      "InputSource": "obj\\Debug\\netstandard2.1\\integrity\\b2vlmBItcr0TetieTxQt_FWIDKsfD-i4cDK43UEwE1I=.hash",
       "Source": "C:\\BLAZOR\\CA3MyShowWatch\\MyShowWatch\\MyShowWatch\\Client\\obj\\Debug\\netstandard2.1\\blazor\\blazor.boot.json",
       "Target": "obj\\Debug\\netstandard2.1\\compressed\\_framework\/blazor.boot.json.gz"
     }

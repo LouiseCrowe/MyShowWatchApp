@@ -11,7 +11,6 @@ namespace MyShowWatch.Client.Shared
     using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
-    using Microsoft.AspNetCore.Components;
 #nullable restore
 #line 1 "C:\BLAZOR\CA3MyShowWatch\MyShowWatch\MyShowWatch\Client\_Imports.razor"
 using System.Net.Http;
@@ -75,6 +74,20 @@ using MyShowWatch.Client.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 1 "C:\BLAZOR\CA3MyShowWatch\MyShowWatch\MyShowWatch\Client\Shared\SearchForTitle.razor"
+using MyShowWatch.Shared;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 2 "C:\BLAZOR\CA3MyShowWatch\MyShowWatch\MyShowWatch\Client\Shared\SearchForTitle.razor"
+using Microsoft.AspNetCore.Components;
+
+#line default
+#line hidden
+#nullable disable
     public partial class SearchForTitle : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -82,6 +95,44 @@ using MyShowWatch.Client.Shared;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 101 "C:\BLAZOR\CA3MyShowWatch\MyShowWatch\MyShowWatch\Client\Shared\SearchForTitle.razor"
+      
+
+    private static readonly String baseURL = "https://localhost:5001/Show/Search/";
+
+    [Parameter]
+    public String Title { get; set; }
+
+    private Show searchResult;
+
+    private bool found;
+
+    private string errormessage;
+
+
+    public async Task Search()
+    {
+        try
+        {
+            searchResult = await Http.GetFromJsonAsync<Show>($"{baseURL}{Title}");
+
+            found = true;
+            errormessage = String.Empty;
+        }
+        catch (Exception e)
+        {
+            found = false;
+            errormessage = e.Message;
+        }
+
+    }
+
+
+#line default
+#line hidden
+#nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient Http { get; set; }
     }
 }
 #pragma warning restore 1591

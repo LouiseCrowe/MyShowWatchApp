@@ -100,13 +100,13 @@ using Microsoft.AspNetCore.Components;
 #line 40 "C:\BLAZOR\CA3MyShowWatch\MyShowWatch\MyShowWatch\Client\Pages\AllDocumentaries.razor"
        
 
+    private static readonly String baseURL = "https://localhost:5001/Show/";
 
     private Show[] documentaries;
 
     protected override async Task OnInitializedAsync()
     {
-        documentaries = await Http.GetFromJsonAsync<Show[]>
-            ("https://localhost:5001/Show/alldocumentaries");
+        documentaries = await Http.GetFromJsonAsync<Show[]>(baseURL + "alldocumentaries");
     }
 
 

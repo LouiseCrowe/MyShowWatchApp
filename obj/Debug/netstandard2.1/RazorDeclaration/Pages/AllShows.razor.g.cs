@@ -103,13 +103,11 @@ using Microsoft.AspNetCore.Components;
 
     private Show[] shows;
 
-    //private static readonly String baseURI = "https://localhost:5001/Show/";
-
-
+    private static readonly String baseURL = "https://localhost:5001/Show/";
 
     protected override async Task OnInitializedAsync()
     {
-        shows = await Http.GetFromJsonAsync<Show[]>("https://localhost:5001/Show/all");
+        shows = await Http.GetFromJsonAsync<Show[]>(baseURL + "all");
     }
 
 
