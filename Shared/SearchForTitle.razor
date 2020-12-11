@@ -1,5 +1,6 @@
 ﻿@using MyShowWatch.Shared
 @using Microsoft.AspNetCore.Components
+@using System.IO
 @inject HttpClient Http
 
 
@@ -9,7 +10,7 @@
         <button class="btn btn-primary" @onclick="Search">Search</button>
     </div>
 </div>
-        
+
 
 @if (found)
 {
@@ -96,11 +97,12 @@
     </div>
 }
 
-    @errormessage
+@errormessage
 
 @code{
 
     private static readonly String baseURL = "https://localhost:5001/Show/Search/";
+
 
     [Parameter]
     public String Title { get; set; }

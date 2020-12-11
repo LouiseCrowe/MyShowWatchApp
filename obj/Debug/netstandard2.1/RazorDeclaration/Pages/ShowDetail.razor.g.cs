@@ -104,8 +104,8 @@ using System.Linq;
     // at the moment it's fine because the parameter comes from the AllShows page which
     // will obviously have a valid Title
     // The title will be a required field as will ShowType
-    
-    
+
+
     [Parameter]
     public String Title { get; set; }
 
@@ -114,11 +114,12 @@ using System.Linq;
 
     private Show[] shows;
 
+    private static readonly String baseURL = "https://localhost:5001/Show/";
+
     protected override async Task OnInitializedAsync()
     {
-        shows = await Http.GetFromJsonAsync<Show[]>("Show");
-
-
+        shows = await Http.GetFromJsonAsync<Show[]>(baseURL + "all");
+   
         Show = shows.FirstOrDefault(s => s.Title.ToLower() == Title.ToLower());
     }
 

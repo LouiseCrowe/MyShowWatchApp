@@ -375,8 +375,8 @@ C:\BLAZOR\CA3MyShowWatch\MyShowWatch\MyShowWatch\Client\obj\Debug\netstandard2.1
 C:\BLAZOR\CA3MyShowWatch\MyShowWatch\MyShowWatch\Client\obj\Debug\netstandard2.1\Razor\Pages\AllTvShows.razor.g.cs
 C:\BLAZOR\CA3MyShowWatch\MyShowWatch\MyShowWatch\Client\obj\Debug\netstandard2.1\RazorDeclaration\Pages\AllDocumentaries.razor.g.cs
 C:\BLAZOR\CA3MyShowWatch\MyShowWatch\MyShowWatch\Client\obj\Debug\netstandard2.1\Razor\Pages\AllDocumentaries.razor.g.cs
-C:\BLAZOR\CA3MyShowWatch\MyShowWatch\MyShowWatch\Client\obj\Debug\netstandard2.1\integrity\Dz7ZHDV8i_XZuOiv4T9XFjJqmpu8GhIlte3U5j3n-uk=.hash
 C:\BLAZOR\CA3MyShowWatch\MyShowWatch\MyShowWatch\Client\obj\Debug\netstandard2.1\integrity\xDjeV0T43YQrO6eS531W5gh_jFFDMH7YuVa3jeGBL3Y=.hash
-C:\BLAZOR\CA3MyShowWatch\MyShowWatch\MyShowWatch\Client\obj\Debug\netstandard2.1\integrity\6CwAH9gKgbHBE43jSuM9ANmqwMlNhKlRDxixu1pNGiI=.hash
 C:\BLAZOR\CA3MyShowWatch\MyShowWatch\MyShowWatch\Client\obj\Debug\netstandard2.1\integrity\-S02OBGAVRgfQ_tlgDJITXTu1irrTg_w2vbHrdVLfhE=.hash
-C:\BLAZOR\CA3MyShowWatch\MyShowWatch\MyShowWatch\Client\obj\Debug\netstandard2.1\integrity\b2vlmBItcr0TetieTxQt_FWIDKsfD-i4cDK43UEwE1I=.hash
+C:\BLAZOR\CA3MyShowWatch\MyShowWatch\MyShowWatch\Client\obj\Debug\netstandard2.1\integrity\HKLAYCA7DiRF-iJQUKeKVhhsxlLWnamlT4zJKQBLGII=.hash
+C:\BLAZOR\CA3MyShowWatch\MyShowWatch\MyShowWatch\Client\obj\Debug\netstandard2.1\integrity\SxrAC21j-nkNyRuNVDKMc79aLgm6po_cE5eqrSrB_SI=.hash
+C:\BLAZOR\CA3MyShowWatch\MyShowWatch\MyShowWatch\Client\obj\Debug\netstandard2.1\integrity\Rc662Oty2oys0VsKcS6RPgoOAi7HGY3a6R_juXktcKQ=.hash

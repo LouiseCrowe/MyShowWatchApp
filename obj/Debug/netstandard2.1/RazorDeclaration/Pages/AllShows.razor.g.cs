@@ -101,7 +101,7 @@ using Microsoft.AspNetCore.Components;
        
 
 
-    private Show[] shows;
+    private Show[] shows { get; set; }
 
     private static readonly String baseURL = "https://localhost:5001/Show/";
 

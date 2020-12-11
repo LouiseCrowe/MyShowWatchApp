@@ -88,6 +88,13 @@ using Microsoft.AspNetCore.Components;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\BLAZOR\CA3MyShowWatch\MyShowWatch\MyShowWatch\Client\Shared\SearchForTitle.razor"
+using System.IO;
+
+#line default
+#line hidden
+#nullable disable
     public partial class SearchForTitle : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -96,10 +103,11 @@ using Microsoft.AspNetCore.Components;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 101 "C:\BLAZOR\CA3MyShowWatch\MyShowWatch\MyShowWatch\Client\Shared\SearchForTitle.razor"
+#line 102 "C:\BLAZOR\CA3MyShowWatch\MyShowWatch\MyShowWatch\Client\Shared\SearchForTitle.razor"
       
 
     private static readonly String baseURL = "https://localhost:5001/Show/Search/";
+
 
     [Parameter]
     public String Title { get; set; }
