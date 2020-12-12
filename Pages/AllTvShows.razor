@@ -27,7 +27,7 @@ else
                 <tr>
                     <td>@show.Title</td>
                     <td>
-                        <a href="@($"showdetail/{show.Title}")" class="btn btn-primary table-btn">
+                        <a href="@($"showdetail/{show.Title}")" class="btn btn-info table-btn">
                             <i class="fas fa-info-circle"></i>
                         </a>
                     </td>
@@ -43,11 +43,11 @@ else
 
     private static readonly String baseURL = "https://localhost:5001/Show/";
 
-    private Show[] tvshows;
+    private List<Show> tvshows;
 
     protected override async Task OnInitializedAsync()
     {
-        tvshows = await Http.GetFromJsonAsync<Show[]>(baseURL + "alltvshows");
+        tvshows = await Http.GetFromJsonAsync<List<Show>>(baseURL + "alltvshows");
     }
 
 }

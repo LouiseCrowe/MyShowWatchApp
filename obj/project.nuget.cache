@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2f9DUgrS9W09fViKyvxY62n80LdqtHivvL0gt21infBRFNkP65UYwNfYvkn9t1HKvl+qlTLYnOTOlkY7V3j/og==",
+  "dgSpecHash": "2C5zoC1+H2SB2Ojxn9FYWA4X9mrF3JVEyxstBHcBk7tE6D6hnyr7YxzEDHxqb1B/jISvl2IWWzsERDW88XF1VQ==",
   "success": true,
-  "projectFilePath": "C:\\BLAZOR\\CA3MyShowWatch\\MyShowWatch\\MyShowWatch\\Client\\MyShowWatch.Client.csproj",
+  "projectFilePath": "C:\\BLAZOR\\CA3\\MyShowWatch\\MyShowWatch\\Client\\MyShowWatch.Client.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LouiseEmily\\.nuget\\packages\\microsoft.aspnetcore.authorization\\3.1.6\\microsoft.aspnetcore.authorization.3.1.6.nupkg.sha512",
     "C:\\Users\\LouiseEmily\\.nuget\\packages\\microsoft.aspnetcore.components\\3.1.6\\microsoft.aspnetcore.components.3.1.6.nupkg.sha512",

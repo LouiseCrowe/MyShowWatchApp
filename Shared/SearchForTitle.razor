@@ -97,15 +97,19 @@
     </div>
 }
 
-@errormessage
+<div>@errormessage</div>
+
 
 @code{
 
     private static readonly String baseURL = "https://localhost:5001/Show/Search/";
 
 
-    [Parameter]
+    
     public String Title { get; set; }
+
+    [Parameter]
+    public String titleNoSpaces { get; set; }
 
     private Show searchResult;
 
@@ -118,7 +122,11 @@
     {
         try
         {
-            searchResult = await Http.GetFromJsonAsync<Show>($"{baseURL}{Title}");
+            // replace any spaces with %20 for url
+
+            titleNoSpaces = Title.Replace(" ", "%20");
+
+            searchResult = await Http.GetFromJsonAsync<Show>(baseURL + titleNoSpaces);
 
             found = true;
             errormessage = String.Empty;
@@ -126,7 +134,7 @@
         catch (Exception e)
         {
             found = false;
-            errormessage = e.Message;
+            errormessage = "This title wasn't found, maybe check your spelling or try another one!";
         }
 
     }
