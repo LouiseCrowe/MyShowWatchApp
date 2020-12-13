@@ -9,7 +9,6 @@ namespace MyShowWatch.Client.Pages
     #line hidden
     using System;
     using System.Collections.Generic;
-    using System.Linq;
     using System.Threading.Tasks;
 #nullable restore
 #line 1 "C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\_Imports.razor"
@@ -88,6 +87,13 @@ using Microsoft.AspNetCore.Components;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 5 "C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\Pages\AllShows.razor"
+using System.Linq;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/allshows")]
     public partial class AllShows : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -97,11 +103,13 @@ using Microsoft.AspNetCore.Components;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 39 "C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\Pages\AllShows.razor"
+#line 72 "C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\Pages\AllShows.razor"
        
 
 
     private List<Show> shows { get; set; }
+
+    //private int numTvShows, numMovies, numDocumentaries;
 
     private static readonly String baseURL = "https://localhost:5001/Show/";
 

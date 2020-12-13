@@ -375,8 +375,8 @@ C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\obj\Debug\netstandard2.1\Razor\Page
 C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\obj\Debug\netstandard2.1\Razor\Pages\ShowDetail.razor.g.cs
 C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\obj\Debug\netstandard2.1\Razor\Shared\AdvancedSearch.razor.g.cs
 C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\obj\Debug\netstandard2.1\Razor\Shared\SearchForTitle.razor.g.cs
-C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\obj\Debug\netstandard2.1\integrity\zAcwLePyD9_HmnVlmsbfCUsawzj2lBjA7TUTcgPApuA=.hash
-C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\obj\Debug\netstandard2.1\integrity\NDJXQZl3YztPi89wpbRs9f3vnnuG-rejErfWIe7xYY8=.hash
-C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\obj\Debug\netstandard2.1\integrity\BpAozPijnSzWPnLpiC3fqm-WOMrYd_GjuwXxloECvhY=.hash
-C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\obj\Debug\netstandard2.1\integrity\b3JbVFprdxd0vGo0jemjSk2BnYtJ2V9n7oiLpeY8Cpc=.hash
-C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\obj\Debug\netstandard2.1\integrity\CpANBghWE-BDpAXKnBlAt6Kj-1FzJvaEvqLct8usnsI=.hash
+C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\obj\Debug\netstandard2.1\integrity\wtKixw05-Wsc1otWS6WsT7fCPiTbhTF66UhtoaSjC30=.hash
+C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\obj\Debug\netstandard2.1\integrity\eGg7sIGFro22OmpkiSxeXqN-SHTqhOfhD8fq6fOakPg=.hash
+C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\obj\Debug\netstandard2.1\integrity\nB4r1kZHy_BAQUP_tEHNVoqS6xyw-Qm3ZYy-wXyqw3Y=.hash
+C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\obj\Debug\netstandard2.1\integrity\doZ9D2ZcD4prhKHvfwQFHIVAa_47g5swOv6YrYamf1w=.hash
+C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\obj\Debug\netstandard2.1\integrity\gIg72Y4Ii5l0_x-vg4SbB4T93nrv6kthnxuehWWwT1o=.hash

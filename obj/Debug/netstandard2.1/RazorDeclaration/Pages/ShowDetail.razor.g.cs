@@ -97,7 +97,7 @@ using System.Linq;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 110 "C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\Pages\ShowDetail.razor"
+#line 130 "C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\Pages\ShowDetail.razor"
        
 
     // maybe should include try catch for search
@@ -119,7 +119,7 @@ using System.Linq;
     protected override async Task OnInitializedAsync()
     {
         shows = await Http.GetFromJsonAsync<Show[]>(baseURL + "all");
-   
+
         Show = shows.FirstOrDefault(s => s.Title.ToLower() == Title.ToLower());
     }
 

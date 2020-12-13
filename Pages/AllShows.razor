@@ -2,8 +2,9 @@
 @using MyShowWatch.Shared
 @using Microsoft.AspNetCore.Components
 @inject HttpClient Http
+@using System.Linq
 
-<h1 class="page-title">All shows I'm tracking</h1>
+<h1 class="display-3">All shows I'm tracking</h1>
 
 <p>Here's a list of all your shows!</p>
 
@@ -13,6 +14,38 @@
 }
 else
 {
+    <h2>Summary Info</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Show Type</th>
+                <th>How Many</th>                
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <a href="@("/alltvshows")">TV Shows</a>
+                </td>
+                <td>@shows.Count(s => s.ShowType == ShowType.TVShow)</td>                
+            </tr>
+            <tr>
+                <td>
+                    <a href="@("/allmovies")">Movies</a>
+                </td>
+                <td>@shows.Count(s => s.ShowType == ShowType.Movie)</td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="@("/alldocumentaries")">Documentaries</a>
+                </td>
+                <td>@shows.Count(s => s.ShowType == ShowType.Documentary)</td>
+            </tr>
+        </tbody>
+    </table>
+
+    
+    <h2>All Shows I'm tracking</h2>
     <table class="table">
         <thead>
             <tr>
@@ -40,6 +73,8 @@ else
 
 
     private List<Show> shows { get; set; }
+
+    //private int numTvShows, numMovies, numDocumentaries;
 
     private static readonly String baseURL = "https://localhost:5001/Show/";
 

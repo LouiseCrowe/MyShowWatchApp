@@ -103,19 +103,19 @@ using System.IO;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 103 "C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\Shared\SearchForTitle.razor"
+#line 25 "C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\Shared\SearchForTitle.razor"
       
 
     private static readonly String baseURL = "https://localhost:5001/Show/Search/";
 
-
-    
+    [Parameter]
     public String Title { get; set; }
 
     [Parameter]
     public String titleNoSpaces { get; set; }
 
-    private Show searchResult;
+    [Parameter]
+    public Show searchResult { get; set; }
 
     private bool found;
 
@@ -138,6 +138,7 @@ using System.IO;
         catch (Exception e)
         {
             found = false;
+            Console.WriteLine(e.Message);
             errormessage = "This title wasn't found, maybe check your spelling or try another one!";
         }
 
@@ -147,6 +148,7 @@ using System.IO;
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavigationManager { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient Http { get; set; }
     }
 }

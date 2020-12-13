@@ -2,99 +2,21 @@
 @using Microsoft.AspNetCore.Components
 @using System.IO
 @inject HttpClient Http
-
+@inject NavigationManager NavigationManager
 
 <div class="input-group">
     <input class="form-control" input type="text" placeholder="Search by title" @bind-value="Title" />
     <div class="input-group-append">
-        <button class="btn btn-primary" @onclick="Search">Search</button>
+        <button class="btn btn-info" @onclick="Search">Search</button>
     </div>
 </div>
 
 
+
+
 @if (found)
 {
-    <h1 class="page-title">Details for @searchResult.Title</h1>
-    <div class="form-group row">
-        <label class="col-sm-4 col-form-label">Type of Show:</label>
-        <div class="col-sm-8">
-            <label type="text" readonly class="form-control-plaintext">@searchResult.ShowType</label>
-        </div>
-    </div>
-
-    <div class="form-group row">
-        <label class="col-sm-4 col-form-label">Is this show available?</label>
-        <div class="col-sm-8">
-            <label type="text" readonly class="form-control-plaintext">@searchResult.Status</label>
-        </div>
-    </div>
-    <div class="form-group row">
-        <label class="col-sm-4 col-form-label">Watched already?</label>
-        <div class="col-sm-8">
-            @if (searchResult.IsWatched)
-            {
-                <label type="text" readonly class="form-control-plaintext">You've seen this one!</label>
-            }
-            else
-            {
-                <label type="text" readonly class="form-control-plaintext">You've still got this to look forward to!</label>
-            }
-        </div>
-    </div>
-    <div class="form-group row">
-        <label class="col-sm-4 col-form-label">Release Date:</label>
-        <div class="col-sm-8">
-            @if (searchResult.ReleaseDate == null && searchResult.Status == Status.NoReleaseDate)
-            {
-                <label type="text" readonly class="form-control-plaintext">Still waiting for the release date!</label>
-            }
-            else
-            {
-                <label type="text" readonly class="form-control-plaintext">@searchResult.ReleaseDate?.ToShortDateString()</label>
-            }
-        </div>
-    </div>
-
-    <div class="form-group row">
-        <label class="col-sm-4 col-form-label">For the kids too?</label>
-        <div class="col-sm-8">
-
-            @if (searchResult.IsKidFriendly)
-            {
-                <label type="text" readonly class="form-control-plaintext">Yes</label>
-            }
-            else
-            {
-                <label type="text" readonly class="form-control-plaintext">No</label>
-            }
-        </div>
-    </div>
-
-    <div class="form-group row">
-        <label class="col-sm-4 col-form-label">Number of seasons:</label>
-        <div class="col-sm-8">
-            <label type="text" readonly class="form-control-plaintext">@searchResult.NumSeasonsConfirmed</label>
-        </div>
-    </div>
-    <div class="form-group row">
-        <label class="col-sm-4 col-form-label">Latest season available:</label>
-        <div class="col-sm-8">
-            <label type="text" readonly class="form-control-plaintext">@searchResult.LatestSeasonAvailable</label>
-        </div>
-    </div>
-    <div class="form-group row">
-        <label class="col-sm-4 col-form-label">Number of Episodes:</label>
-        <div class="col-sm-8">
-            <label type="text" readonly class="form-control-plaintext">@searchResult.NumEpisodes</label>
-        </div>
-    </div>
-
-    <div class="form-group row">
-        <label class="col-sm-4 col-form-label">Description:</label>
-        <div class="col-sm-8">
-            <label type="text" readonly class="form-control-plaintext">@searchResult.Description</label>
-        </div>
-    </div>
+    NavigationManager.NavigateTo($"showdetail/{searchResult.Title}");
 }
 
 <div>@errormessage</div>
@@ -104,14 +26,14 @@
 
     private static readonly String baseURL = "https://localhost:5001/Show/Search/";
 
-
-    
+    [Parameter]
     public String Title { get; set; }
 
     [Parameter]
     public String titleNoSpaces { get; set; }
 
-    private Show searchResult;
+    [Parameter]
+    public Show searchResult { get; set; }
 
     private bool found;
 
@@ -134,6 +56,7 @@
         catch (Exception e)
         {
             found = false;
+            Console.WriteLine(e.Message);
             errormessage = "This title wasn't found, maybe check your spelling or try another one!";
         }
 
