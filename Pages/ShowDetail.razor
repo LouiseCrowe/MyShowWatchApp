@@ -2,143 +2,158 @@
 @using MyShowWatch.Shared
 @using System.Linq
 @inject HttpClient Http
+
 @*show detail title customised by show type*@
 
-@if (Show.ShowType == ShowType.Movie)
-{
-    <h1 class="page-title">@Show.Title - Movie</h1>
-}
+    @if (Show.ShowType == ShowType.Movie)
+    {
+        <h1 class="page-title">@Show.Title - Movie</h1>
+    }
 
-@if (Show.ShowType == ShowType.TVShow)
-{
-    <h1 class="page-title">@Show.Title - TV Show</h1>
-}
+    @if (Show.ShowType == ShowType.TVShow)
+    {
+        <h1 class="page-title">@Show.Title - TV Show</h1>
+    }
 
-@if (Show.ShowType == ShowType.Documentary)
-{
-    <h1 class="page-title">@Show.Title - Documentary</h1>
-}
+    @if (Show.ShowType == ShowType.Documentary)
+    {
+        <h1 class="page-title">@Show.Title - Documentary</h1>
+    }
 
-<div class="form-group row">
-    <label class="col-6 col-sm-3 col-form-label">Watched already?</label>
-    <div class="col">
-        @if (Show.IsWatched)
-        {
-            <label type="text" readonly class="form-control-plaintext">Yes</label>
-        }
-        else
-        {
-            <label type="text" readonly class="form-control-plaintext">No</label>
-        }
-    </div>
-</div>
-
-
-<div class="form-group row">
-    <label class="col-6 col-sm-3 col-form-label">Is show available?</label>
-    <div class="col">
-
-        @if (Show.Status == Status.Available)
-        {
-            <label type="text" readonly class="form-control-plaintext">Yes</label>
-        }
-        else if (Show.Status == Status.AwaitingRelease)
-        {
-            @if (Show.ReleaseDate != null)
+    <div class="form-group row">
+        <label class="col-6 col-sm-3 col-form-label">Watched already?</label>
+        <div class="col">
+            @if (Show.IsWatched)
             {
-                <label type="text" readonly class="form-control-plaintext">
-                    Not yet, release date is @Show.ReleaseDate.Value.ToShortDateString()
-                </label>
+                <label type="text" readonly class="form-control-plaintext">Yes</label>
+            }
+            else
+            {
+                <label type="text" readonly class="form-control-plaintext">No</label>
+            }
+        </div>
+    </div>
+
+
+    <div class="form-group row">
+        <label class="col-6 col-sm-3 col-form-label">Is show available?</label>
+        <div class="col">
+
+            @if (Show.Status == Status.Available)
+            {
+                <label type="text" readonly class="form-control-plaintext">Yes</label>
+            }
+            else if (Show.Status == Status.AwaitingRelease)
+            {
+                @if (Show.ReleaseDate != null)
+                {
+                    <label type="text" readonly class="form-control-plaintext">
+                        Not yet, release date is @Show.ReleaseDate.Value.ToShortDateString()
+                    </label>
+                }
+                else
+                {
+                    <label type="text" readonly class="form-control-plaintext">
+                        Awaiting release date
+                    </label>
+                }
             }
             else
             {
                 <label type="text" readonly class="form-control-plaintext">
-                    Awaiting release date
+                    No further releases planned
                 </label>
             }
-        }
-        else
-        {
-            <label type="text" readonly class="form-control-plaintext">
-                No further releases planned
-            </label>
-        }
+        </div>
     </div>
-</div>
 
-<div class="form-group row">
-    <label class="col-6 col-sm-3 col-form-label">Is show still running?</label>
-    <div class="col">
+    <div class="form-group row">
+        <label class="col-6 col-sm-3 col-form-label">Is show still running?</label>
+        <div class="col">
 
-        @if (Show.ShowComplete)
-        {
-            <label type="text" readonly class="form-control-plaintext">No</label>
-        }
-        else
-        {
-            <label type="text" readonly class="form-control-plaintext">Yes</label>
-        }
+            @if (Show.ShowComplete)
+            {
+                <label type="text" readonly class="form-control-plaintext">No</label>
+            }
+            else
+            {
+                <label type="text" readonly class="form-control-plaintext">Yes</label>
+            }
+        </div>
     </div>
-</div>
+
+    @*Only display fields that are relevant for show type*@
+    @if (Show.ShowType == ShowType.TVShow || Show.ShowType == ShowType.Documentary)
+    {
+        <div class="form-group row">
+            <label class="col-6 col-sm-3 col-form-label">Number of seasons:</label>
+            <div class="col">
+                <label type="text" readonly class="form-control-plaintext">@Show.NumSeasonsConfirmed</label>
+            </div>
+        </div>
 
 
-<div class="form-group row">
-    <label class="col-6 col-sm-3 col-form-label">Number of seasons:</label>
-    <div class="col">
-        <label type="text" readonly class="form-control-plaintext">@Show.NumSeasonsConfirmed</label>
+        <div class="form-group row">
+            <label class="col-6 col-sm-3 col-form-label">Latest season available:</label>
+            <div class="col">
+                <label type="text" readonly class="form-control-plaintext">@Show.LatestSeasonAvailable</label>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-6 col-sm-3 col-form-label">Episodes per season:</label>
+            <div class="col">
+                <label type="text" readonly class="form-control-plaintext">@Show.NumEpisodes</label>
+            </div>
+        </div>
+
+    }
+
+    @if (Show.ShowType == ShowType.Movie)
+    {
+        <div class="form-group row">
+            <label class="col-6 col-sm-3 col-form-label">Number of movies:</label>
+            <div class="col">
+                <label type="text" readonly class="form-control-plaintext">@Show.NumMovies</label>
+            </div>
+        </div>
+
+
+        <div class="form-group row">
+            <label class="col-6 col-sm-3 col-form-label">Latest movie available:</label>
+            <div class="col">
+                <label type="text" readonly class="form-control-plaintext">@Show.LatestMovieAvailable</label>
+            </div>
+        </div>
+    }
+
+    <div class="form-group row">
+        <label class="col-6 col-sm-3 col-form-label">Description:</label>
+        <div class="col">
+            <label type="text" readonly class="form-control-plaintext">@Show.Description</label>
+        </div>
     </div>
-</div>
 
+    <div class="form-group row">
+        <label class="col-6 col-sm-3 col-form-label">Family show?</label>
+        <div class="col">
 
-<div class="form-group row">
-    <label class="col-6 col-sm-3 col-form-label">Latest season available:</label>
-    <div class="col">
-        <label type="text" readonly class="form-control-plaintext">@Show.LatestSeasonAvailable</label>
+            @if (Show.IsKidFriendly)
+            {
+                <label type="text" readonly class="form-control-plaintext">Yes</label>
+            }
+            else
+            {
+                <label type="text" readonly class="form-control-plaintext">No</label>
+            }
+        </div>
     </div>
-</div>
-
-<div class="form-group row">
-    <label class="col-6 col-sm-3 col-form-label">Number of Episodes:</label>
-    <div class="col">
-        <label type="text" readonly class="form-control-plaintext">@Show.NumEpisodes</label>
-    </div>
-</div>
-
-<div class="form-group row">
-    <label class="col-6 col-sm-3 col-form-label">Description:</label>
-    <div class="col">
-        <label type="text" readonly class="form-control-plaintext">@Show.Description</label>
-    </div>
-</div>
-
-<div class="form-group row">
-    <label class="col-6 col-sm-3 col-form-label">Family show?</label>
-    <div class="col">
-
-        @if (Show.IsKidFriendly)
-        {
-            <label type="text" readonly class="form-control-plaintext">Yes</label>
-        }
-        else
-        {
-            <label type="text" readonly class="form-control-plaintext">No</label>
-        }
-    </div>
-</div>
 
 
 @code {
-
-    // maybe should include try catch for search
-    // at the moment it's fine because the parameter comes from the AllShows page which
-    // will obviously have a valid Title
-    // The title will be a required field as will ShowType
-
-
     [Parameter]
     public String Title { get; set; }
 
-    // for getting show details - REMOVE COMMENT BEFORE SUBMITTING
     public Show Show { get; set; } = new Show();
 
     private Show[] shows;

@@ -12,84 +12,98 @@ namespace MyShowWatch.Client.Shared
     using System.Linq;
     using System.Threading.Tasks;
 #nullable restore
-#line 1 "C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\_Imports.razor"
+#line 1 "C:\BLAZOR\CA3 - Copy\MyShowWatch\MyShowWatch\Client\_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\_Imports.razor"
+#line 2 "C:\BLAZOR\CA3 - Copy\MyShowWatch\MyShowWatch\Client\_Imports.razor"
 using System.Net.Http.Json;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\_Imports.razor"
+#line 3 "C:\BLAZOR\CA3 - Copy\MyShowWatch\MyShowWatch\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\_Imports.razor"
+#line 4 "C:\BLAZOR\CA3 - Copy\MyShowWatch\MyShowWatch\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\_Imports.razor"
+#line 5 "C:\BLAZOR\CA3 - Copy\MyShowWatch\MyShowWatch\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\_Imports.razor"
+#line 6 "C:\BLAZOR\CA3 - Copy\MyShowWatch\MyShowWatch\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.WebAssembly.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\_Imports.razor"
+#line 7 "C:\BLAZOR\CA3 - Copy\MyShowWatch\MyShowWatch\Client\_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\_Imports.razor"
+#line 8 "C:\BLAZOR\CA3 - Copy\MyShowWatch\MyShowWatch\Client\_Imports.razor"
 using MyShowWatch.Client;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\_Imports.razor"
+#line 9 "C:\BLAZOR\CA3 - Copy\MyShowWatch\MyShowWatch\Client\_Imports.razor"
 using MyShowWatch.Client.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 1 "C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\Shared\SearchForTitle.razor"
+#line 10 "C:\BLAZOR\CA3 - Copy\MyShowWatch\MyShowWatch\Client\_Imports.razor"
+using Telerik.Blazor;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 11 "C:\BLAZOR\CA3 - Copy\MyShowWatch\MyShowWatch\Client\_Imports.razor"
+using Telerik.Blazor.Components;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 1 "C:\BLAZOR\CA3 - Copy\MyShowWatch\MyShowWatch\Client\Shared\SearchForTitle.razor"
 using MyShowWatch.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\Shared\SearchForTitle.razor"
+#line 2 "C:\BLAZOR\CA3 - Copy\MyShowWatch\MyShowWatch\Client\Shared\SearchForTitle.razor"
 using Microsoft.AspNetCore.Components;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\Shared\SearchForTitle.razor"
+#line 3 "C:\BLAZOR\CA3 - Copy\MyShowWatch\MyShowWatch\Client\Shared\SearchForTitle.razor"
 using System.IO;
 
 #line default
@@ -103,7 +117,7 @@ using System.IO;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 25 "C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\Shared\SearchForTitle.razor"
+#line 24 "C:\BLAZOR\CA3 - Copy\MyShowWatch\MyShowWatch\Client\Shared\SearchForTitle.razor"
       
 
     private static readonly String baseURL = "https://localhost:5001/Show/Search/";
@@ -133,7 +147,7 @@ using System.IO;
             searchResult = await Http.GetFromJsonAsync<Show>(baseURL + titleNoSpaces);
 
             found = true;
-            errormessage = String.Empty;
+            errormessage = String.Empty;            
         }
         catch (Exception e)
         {

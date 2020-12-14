@@ -12,11 +12,10 @@
 </div>
 
 
-
-
 @if (found)
 {
     NavigationManager.NavigateTo($"showdetail/{searchResult.Title}");
+
 }
 
 <div>@errormessage</div>
@@ -51,7 +50,7 @@
             searchResult = await Http.GetFromJsonAsync<Show>(baseURL + titleNoSpaces);
 
             found = true;
-            errormessage = String.Empty;
+            errormessage = String.Empty;            
         }
         catch (Exception e)
         {

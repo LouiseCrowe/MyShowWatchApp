@@ -51,5 +51,13 @@ obj\Debug\netstandard2.1\blazor\unlinked\Microsoft.Extensions.Logging.dll
 obj\Debug\netstandard2.1\blazor\unlinked\Microsoft.Extensions.Options.dll
 obj\Debug\netstandard2.1\blazor\unlinked\Microsoft.JSInterop.dll
 obj\Debug\netstandard2.1\blazor\unlinked\Microsoft.JSInterop.WebAssembly.dll
+obj\Debug\netstandard2.1\blazor\unlinked\Telerik.Blazor.dll
+obj\Debug\netstandard2.1\blazor\unlinked\Newtonsoft.Json.dll
+obj\Debug\netstandard2.1\blazor\unlinked\Telerik.Recurrence.dll
+obj\Debug\netstandard2.1\blazor\unlinked\Telerik.Documents.SpreadsheetStreaming.dll
+obj\Debug\netstandard2.1\blazor\unlinked\Telerik.Zip.dll
+obj\Debug\netstandard2.1\blazor\unlinked\Telerik.DataSource.dll
+obj\Debug\netstandard2.1\blazor\unlinked\Microsoft.CSharp.dll
+obj\Debug\netstandard2.1\blazor\unlinked\System.Runtime.Loader.dll
 obj\Debug\netstandard2.1\blazor\unlinked\MyShowWatch.Client.pdb
 obj\Debug\netstandard2.1\blazor\unlinked\MyShowWatch.Shared.pdb

@@ -1,16 +1,21 @@
-﻿@inherits LayoutComponentBase
+﻿@layout TelerikLayout
+@inherits LayoutComponentBase
+@using Telerik.Blazor.Components
 
-<div class="sidebar">
-    <NavMenu />
-</div>
 
-<div class="main">
-    <div class="top-row px-4">
-        <a href="http://blazor.net" target="_blank" class="ml-md-auto">About</a>
+<TelerikRootComponent>
+    <div class="sidebar">
+        <NavMenu />
     </div>
 
-    <div class="content px-4">
+    <div class="main">
+        <div class="top-row px-4">
+            <h3><a href="/">MyShowWatch keeping track of all my shows!</a></h3>
+            <a href="http://blazor.net" target="_blank" class="ml-md-auto">About</a>
+        </div>
 
-        @Body
+        <div class="content px-4">
+            @Body
+        </div>
     </div>
-</div>
+</TelerikRootComponent>

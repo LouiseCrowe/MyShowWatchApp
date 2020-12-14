@@ -1,0 +1,40 @@
+﻿@page "/detailedview"
+@using MyShowWatch.Shared
+@using Microsoft.AspNetCore.Components
+@using Telerik.Blazor.Components
+@inject HttpClient Http
+
+<br />
+<div>
+    <SearchForTitle></SearchForTitle>
+</div>
+<br />
+
+
+<TelerikGrid Data="shows" Sortable="true" Pageable="true" FilterMode="GridFilterMode.FilterMenu">
+    <GridColumns>
+        <GridColumn Field="@nameof(Show.Title)"></GridColumn>
+        <GridColumn Field="@nameof(Show.ShowType)" Title="Show Type"></GridColumn>
+        <GridColumn Field="@nameof(Show.Status)"></GridColumn>
+        <GridColumn Field="@nameof(Show.ReleaseDate)" Title="Release Date"></GridColumn>
+        <GridColumn Field="@nameof(Show.IsWatched)" Title="Watched it?"></GridColumn>
+        <GridColumn Field="@nameof(Show.ShowComplete)" Title="Still running?"></GridColumn>
+        <GridColumn Field="@nameof(Show.IsKidFriendly)" Title="For the kids?"></GridColumn>
+    </GridColumns>
+</TelerikGrid>
+
+@code {
+
+
+    private List<Show> shows { get; set; }
+
+    //private int numTvShows, numMovies, numDocumentaries;
+
+    private static readonly String baseURL = "https://localhost:5001/Show/";
+
+    protected override async Task OnInitializedAsync()
+    {
+        shows = await Http.GetFromJsonAsync<List<Show>>(baseURL + "all");
+    }
+
+}

@@ -4,9 +4,11 @@
 @inject HttpClient Http
 @using System.Linq
 
-<h1 class="display-3">All shows I'm tracking</h1>
-
-<p>Here's a list of all your shows!</p>
+<br />
+<div>
+    <SearchForTitle></SearchForTitle>
+</div>
+<br />
 
 @if (shows == null)
 {
@@ -14,12 +16,12 @@
 }
 else
 {
-    <h2>Summary Info</h2>
+    <h3>Summary info for All Shows</h3>
     <table class="table">
         <thead>
             <tr>
                 <th>Show Type</th>
-                <th>How Many</th>                
+                <th>How Many</th>
             </tr>
         </thead>
         <tbody>
@@ -27,7 +29,7 @@ else
                 <td>
                     <a href="@("/alltvshows")">TV Shows</a>
                 </td>
-                <td>@shows.Count(s => s.ShowType == ShowType.TVShow)</td>                
+                <td>@shows.Count(s => s.ShowType == ShowType.TVShow)</td>
             </tr>
             <tr>
                 <td>
@@ -44,9 +46,9 @@ else
         </tbody>
     </table>
 
-    
-    <h2>All Shows I'm tracking</h2>
-    <table class="table">
+
+    <h3>All shows I'm tracking</h3>
+    <table class="table table-striped">
         <thead>
             <tr>
                 <th>Show Title</th>
@@ -57,7 +59,9 @@ else
             @foreach (var show in shows)
             {
                 <tr>
-                    <td>@show.Title</td>
+                    <td>
+                        @show.Title
+                    </td>
                     <td>
                         <a href="@($"showdetail/{show.Title}")" class="btn btn-info table-btn">
                             <i class="fas fa-info-circle"></i>
@@ -73,8 +77,6 @@ else
 
 
     private List<Show> shows { get; set; }
-
-    //private int numTvShows, numMovies, numDocumentaries;
 
     private static readonly String baseURL = "https://localhost:5001/Show/";
 

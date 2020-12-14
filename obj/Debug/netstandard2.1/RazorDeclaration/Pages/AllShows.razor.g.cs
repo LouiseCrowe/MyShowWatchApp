@@ -11,84 +11,98 @@ namespace MyShowWatch.Client.Pages
     using System.Collections.Generic;
     using System.Threading.Tasks;
 #nullable restore
-#line 1 "C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\_Imports.razor"
+#line 1 "C:\BLAZOR\CA3 - Copy\MyShowWatch\MyShowWatch\Client\_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\_Imports.razor"
+#line 2 "C:\BLAZOR\CA3 - Copy\MyShowWatch\MyShowWatch\Client\_Imports.razor"
 using System.Net.Http.Json;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\_Imports.razor"
+#line 3 "C:\BLAZOR\CA3 - Copy\MyShowWatch\MyShowWatch\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\_Imports.razor"
+#line 4 "C:\BLAZOR\CA3 - Copy\MyShowWatch\MyShowWatch\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\_Imports.razor"
+#line 5 "C:\BLAZOR\CA3 - Copy\MyShowWatch\MyShowWatch\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\_Imports.razor"
+#line 6 "C:\BLAZOR\CA3 - Copy\MyShowWatch\MyShowWatch\Client\_Imports.razor"
 using Microsoft.AspNetCore.Components.WebAssembly.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\_Imports.razor"
+#line 7 "C:\BLAZOR\CA3 - Copy\MyShowWatch\MyShowWatch\Client\_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\_Imports.razor"
+#line 8 "C:\BLAZOR\CA3 - Copy\MyShowWatch\MyShowWatch\Client\_Imports.razor"
 using MyShowWatch.Client;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\_Imports.razor"
+#line 9 "C:\BLAZOR\CA3 - Copy\MyShowWatch\MyShowWatch\Client\_Imports.razor"
 using MyShowWatch.Client.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\Pages\AllShows.razor"
+#line 10 "C:\BLAZOR\CA3 - Copy\MyShowWatch\MyShowWatch\Client\_Imports.razor"
+using Telerik.Blazor;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 11 "C:\BLAZOR\CA3 - Copy\MyShowWatch\MyShowWatch\Client\_Imports.razor"
+using Telerik.Blazor.Components;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 2 "C:\BLAZOR\CA3 - Copy\MyShowWatch\MyShowWatch\Client\Pages\AllShows.razor"
 using MyShowWatch.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\Pages\AllShows.razor"
+#line 3 "C:\BLAZOR\CA3 - Copy\MyShowWatch\MyShowWatch\Client\Pages\AllShows.razor"
 using Microsoft.AspNetCore.Components;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\Pages\AllShows.razor"
+#line 5 "C:\BLAZOR\CA3 - Copy\MyShowWatch\MyShowWatch\Client\Pages\AllShows.razor"
 using System.Linq;
 
 #line default
@@ -103,13 +117,11 @@ using System.Linq;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 72 "C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\Pages\AllShows.razor"
+#line 76 "C:\BLAZOR\CA3 - Copy\MyShowWatch\MyShowWatch\Client\Pages\AllShows.razor"
        
 
 
     private List<Show> shows { get; set; }
-
-    //private int numTvShows, numMovies, numDocumentaries;
 
     private static readonly String baseURL = "https://localhost:5001/Show/";
 

@@ -3,50 +3,50 @@
 @using Microsoft.AspNetCore.Components
 @inject HttpClient Http
 
-<h2 class="display-4">MyShowWatch</h2>
+    <br />
+    <div>
+        <SearchForTitle></SearchForTitle>
+    </div>
+    <br />
 
-<div>
-    <SearchForTitle></SearchForTitle>
-</div>
-<br />
-<div class="card-deck">
-    <div class="card bg-info">
-        <div class="card-body">
-            <h4 class="card-title">All Shows</h4>
-            <p class="card-text">
-                Check out the complete list of all your shows!
-            </p>
-            <a href="allshows" class="btn btn-info btn-outline-dark btn-block stretched-link">All Shows</a>
+    <div class="card-deck">
+        <div class="card bg-info">
+            <div class="card-body">
+                <h4 class="card-title">All Shows</h4>
+                <p class="card-text">
+                    Check out the complete list of all your shows!
+                </p>
+                <a href="allshows" class="btn btn-info btn-outline-dark btn-block stretched-link">All Shows</a>
+            </div>
+        </div>
+        <div class="card bg-warning">
+            <div class="card-body">
+                <h4 class="card-title">TV Shows</h4>
+                <p class="card-text">
+                    Which TV show would you like to catch up on?
+                </p>
+                <a href="alltvshows" class="btn btn-warning btn-outline-dark btn-block stretched-link">TV Shows</a>
+            </div>
+        </div>
+        <div class="card bg-success">
+            <div class="card-body">
+                <h4 class="card-title">Movies</h4>
+                <p class="card-text">
+                    Grab the popcorn and pick a movie!
+                </p>
+                <a href="allmovies" class="btn btn-success btn-outline-dark btn-block stretched-link">Movies</a>
+            </div>
+        </div>
+        <div class="card bg-danger">
+            <div class="card-body">
+                <h4 class="card-title">Documentaries</h4>
+                <p class="card-text">
+                    What documentary are you interested in today?
+                </p>
+                <a href="alldocumentaries" class="btn btn-danger btn-outline-dark btn-block stretched-link">Documentaries</a>
+            </div>
         </div>
     </div>
-    <div class="card bg-warning">
-        <div class="card-body">
-            <h4 class="card-title">TV Shows</h4>
-            <p class="card-text">
-                Which TV show would you like to catch up on?
-            </p>
-            <a href="alltvshows" class="btn btn-warning btn-outline-dark btn-block stretched-link">TV Shows</a>
-        </div>
-    </div>
-    <div class="card bg-success">
-        <div class="card-body">
-            <h4 class="card-title">Movies</h4>
-            <p class="card-text">
-                Grab the popcorn and pick a movie!
-            </p>
-            <a href="allmovies" class="btn btn-success btn-outline-dark btn-block stretched-link">Movies</a>
-        </div>
-    </div>
-    <div class="card bg-danger">
-        <div class="card-body">
-            <h4 class="card-title">Documentaries</h4>
-            <p class="card-text">
-                What documentary are you interested in today?
-            </p>
-            <a href="alldocumentaries" class="btn btn-danger btn-outline-dark btn-block stretched-link">Documentaries</a>
-        </div>
-    </div>
-</div>
 
 
 
