@@ -5,31 +5,35 @@
 
 @*show detail title customised by show type*@
 
-    @if (Show.ShowType == ShowType.Movie)
+    @if (SelectedShow.ShowType == ShowType.Movie)
     {
-        <h1 class="page-title">@Show.Title - Movie</h1>
+        <h1 class="page-title">@SelectedShow.Title - Movie</h1>
     }
 
-    @if (Show.ShowType == ShowType.TVShow)
+    @if (SelectedShow.ShowType == ShowType.TVShow)
     {
-        <h1 class="page-title">@Show.Title - TV Show</h1>
+        <h1 class="page-title">@SelectedShow.Title - TV Show</h1>
     }
 
-    @if (Show.ShowType == ShowType.Documentary)
+    @if (SelectedShow.ShowType == ShowType.Documentary)
     {
-        <h1 class="page-title">@Show.Title - Documentary</h1>
+        <h1 class="page-title">@SelectedShow.Title - Documentary</h1>
     }
 
     <div class="form-group row">
         <label class="col-6 col-sm-3 col-form-label">Watched already?</label>
         <div class="col">
-            @if (Show.IsWatched)
+            @if (SelectedShow.WatchStatus == WatchStatus.Watched)
             {
-                <label type="text" readonly class="form-control-plaintext">Yes</label>
+                <label type="text" readonly class="form-control-plaintext">Watched</label>
+            }
+            else if (SelectedShow.WatchStatus == WatchStatus.Watching)
+            {
+                <label type="text" readonly class="form-control-plaintext">Watching</label>
             }
             else
             {
-                <label type="text" readonly class="form-control-plaintext">No</label>
+                <label type="text" readonly class="form-control-plaintext">Not watched</label>
             }
         </div>
     </div>
@@ -39,16 +43,16 @@
         <label class="col-6 col-sm-3 col-form-label">Is show available?</label>
         <div class="col">
 
-            @if (Show.Status == Status.Available)
+            @if (SelectedShow.Availability == Availability.Available)
             {
                 <label type="text" readonly class="form-control-plaintext">Yes</label>
             }
-            else if (Show.Status == Status.AwaitingRelease)
+            else if (SelectedShow.Availability == Availability.AwaitingRelease)
             {
-                @if (Show.ReleaseDate != null)
+                @if (SelectedShow.ReleaseDate != null)
                 {
                     <label type="text" readonly class="form-control-plaintext">
-                        Not yet, release date is @Show.ReleaseDate.Value.ToShortDateString()
+                        Not yet, release date is @SelectedShow.ReleaseDate.Value.ToShortDateString()
                     </label>
                 }
                 else
@@ -71,24 +75,24 @@
         <label class="col-6 col-sm-3 col-form-label">Is show still running?</label>
         <div class="col">
 
-            @if (Show.ShowComplete)
+            @if (SelectedShow.RunningStatus == RunningStatus.Ongoing)
             {
-                <label type="text" readonly class="form-control-plaintext">No</label>
+                <label type="text" readonly class="form-control-plaintext">Yes</label>
             }
             else
             {
-                <label type="text" readonly class="form-control-plaintext">Yes</label>
+                <label type="text" readonly class="form-control-plaintext">No</label>
             }
         </div>
     </div>
 
     @*Only display fields that are relevant for show type*@
-    @if (Show.ShowType == ShowType.TVShow || Show.ShowType == ShowType.Documentary)
+    @if (SelectedShow.ShowType == ShowType.TVShow || SelectedShow.ShowType == ShowType.Documentary)
     {
         <div class="form-group row">
             <label class="col-6 col-sm-3 col-form-label">Number of seasons:</label>
             <div class="col">
-                <label type="text" readonly class="form-control-plaintext">@Show.NumSeasonsConfirmed</label>
+                <label type="text" readonly class="form-control-plaintext">@SelectedShow.NumSeasonsConfirmed</label>
             </div>
         </div>
 
@@ -96,25 +100,25 @@
         <div class="form-group row">
             <label class="col-6 col-sm-3 col-form-label">Latest season available:</label>
             <div class="col">
-                <label type="text" readonly class="form-control-plaintext">@Show.LatestSeasonAvailable</label>
+                <label type="text" readonly class="form-control-plaintext">@SelectedShow.LatestSeasonAvailable</label>
             </div>
         </div>
 
         <div class="form-group row">
             <label class="col-6 col-sm-3 col-form-label">Episodes per season:</label>
             <div class="col">
-                <label type="text" readonly class="form-control-plaintext">@Show.NumEpisodes</label>
+                <label type="text" readonly class="form-control-plaintext">@SelectedShow.NumEpisodes</label>
             </div>
         </div>
 
     }
 
-    @if (Show.ShowType == ShowType.Movie)
+    @if (SelectedShow.ShowType == ShowType.Movie)
     {
         <div class="form-group row">
             <label class="col-6 col-sm-3 col-form-label">Number of movies:</label>
             <div class="col">
-                <label type="text" readonly class="form-control-plaintext">@Show.NumMovies</label>
+                <label type="text" readonly class="form-control-plaintext">@SelectedShow.NumMovies</label>
             </div>
         </div>
 
@@ -122,7 +126,7 @@
         <div class="form-group row">
             <label class="col-6 col-sm-3 col-form-label">Latest movie available:</label>
             <div class="col">
-                <label type="text" readonly class="form-control-plaintext">@Show.LatestMovieAvailable</label>
+                <label type="text" readonly class="form-control-plaintext">@SelectedShow.LatestMovieAvailable</label>
             </div>
         </div>
     }
@@ -130,7 +134,7 @@
     <div class="form-group row">
         <label class="col-6 col-sm-3 col-form-label">Description:</label>
         <div class="col">
-            <label type="text" readonly class="form-control-plaintext">@Show.Description</label>
+            <label type="text" readonly class="form-control-plaintext">@SelectedShow.Description</label>
         </div>
     </div>
 
@@ -138,7 +142,7 @@
         <label class="col-6 col-sm-3 col-form-label">Family show?</label>
         <div class="col">
 
-            @if (Show.IsKidFriendly)
+            @if (SelectedShow.AgeRating == AgeRating.FamilyFriendly)
             {
                 <label type="text" readonly class="form-control-plaintext">Yes</label>
             }
@@ -154,7 +158,7 @@
     [Parameter]
     public String Title { get; set; }
 
-    public Show Show { get; set; } = new Show();
+    public Show SelectedShow { get; set; } = new Show();
 
     private Show[] shows;
 
@@ -164,7 +168,7 @@
     {
         shows = await Http.GetFromJsonAsync<Show[]>(baseURL + "all");
 
-        Show = shows.FirstOrDefault(s => s.Title.ToLower() == Title.ToLower());
+        SelectedShow = shows.FirstOrDefault(s => s.Title.ToLower() == Title.ToLower());
     }
 
 }

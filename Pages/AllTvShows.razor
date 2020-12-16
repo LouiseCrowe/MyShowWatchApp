@@ -1,6 +1,5 @@
 ﻿@page "/alltvshows"
 @using MyShowWatch.Shared
-@using Microsoft.AspNetCore.Components
 @inject HttpClient Http
 
 <br />
@@ -21,7 +20,7 @@ else
         <thead>
             <tr>
                 <th>Show Title</th>
-                <th></th>
+                <th>Details</th>
 
             </tr>
         </thead>
@@ -42,8 +41,6 @@ else
 }
 
 @code {
-
-    private string Title;
 
     private static readonly String baseURL = "https://localhost:5001/Show/";
 

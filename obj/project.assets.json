@@ -3866,11 +3866,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\BLAZOR\\CA3 - Copy\\MyShowWatch\\MyShowWatch\\Client\\MyShowWatch.Client.csproj",
+      "projectUniqueName": "C:\\BLAZOR\\CA3\\MyShowWatch\\MyShowWatch\\Client\\MyShowWatch.Client.csproj",
       "projectName": "MyShowWatch.Client",
-      "projectPath": "C:\\BLAZOR\\CA3 - Copy\\MyShowWatch\\MyShowWatch\\Client\\MyShowWatch.Client.csproj",
+      "projectPath": "C:\\BLAZOR\\CA3\\MyShowWatch\\MyShowWatch\\Client\\MyShowWatch.Client.csproj",
       "packagesPath": "C:\\Users\\LouiseEmily\\.nuget\\packages\\",
-      "outputPath": "C:\\BLAZOR\\CA3 - Copy\\MyShowWatch\\MyShowWatch\\Client\\obj\\",
+      "outputPath": "C:\\BLAZOR\\CA3\\MyShowWatch\\MyShowWatch\\Client\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -3892,8 +3892,8 @@
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
           "projectReferences": {
-            "C:\\BLAZOR\\CA3 - Copy\\MyShowWatch\\MyShowWatch\\Shared\\MyShowWatch.Shared.csproj": {
-              "projectPath": "C:\\BLAZOR\\CA3 - Copy\\MyShowWatch\\MyShowWatch\\Shared\\MyShowWatch.Shared.csproj"
+            "C:\\BLAZOR\\CA3\\MyShowWatch\\MyShowWatch\\Shared\\MyShowWatch.Shared.csproj": {
+              "projectPath": "C:\\BLAZOR\\CA3\\MyShowWatch\\MyShowWatch\\Shared\\MyShowWatch.Shared.csproj"
             }
           }
         }

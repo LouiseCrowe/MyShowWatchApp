@@ -1,55 +1,53 @@
 ﻿@page "/alldocumentaries"
 @using MyShowWatch.Shared
-@using Microsoft.AspNetCore.Components
 @inject HttpClient Http
 
-    <br />
-    <div>
-        <SearchForTitle></SearchForTitle>
-    </div>
-    <br />
+<br />
+<div>
+    <SearchForTitle></SearchForTitle>
+</div>
+<br />
 
-    <h3>All documentaries I'm tracking</h3>
+<h3>All documentaries I'm tracking</h3>
 
-    @if (documentaries == null)
-    {
-        <p><em>Loading...</em></p>
-    }
-    else
-    {
-        <table class="table">
-            <thead>
+@if (documentaries == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var show in documentaries)
+            {
                 <tr>
-                    <th>Title</th>
-                    <th></th>
-
+                    <td>@show.Title</td>
+                    <td>
+                        <a href="@($"showdetail/{show.Title}")" class="btn btn-info table-btn">
+                            <i class="fas fa-info-circle"></i>
+                        </a>
+                    </td>
                 </tr>
-            </thead>
-            <tbody>
-                @foreach (var show in documentaries)
-                {
-                    <tr>
-                        <td>@show.Title</td>
-                        <td>
-                            <a href="@($"showdetail/{show.Title}")" class="btn btn-info table-btn">
-                                <i class="fas fa-info-circle"></i>
-                            </a>
-                        </td>
-                    </tr>
-                }
-            </tbody>
-        </table>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+
+    private static readonly String baseURL = "https://localhost:5001/Show/";
+
+    private List<Show> documentaries;
+
+    protected override async Task OnInitializedAsync()
+    {
+        documentaries = await Http.GetFromJsonAsync<List<Show>>(baseURL + "alldocumentaries");
     }
 
-    @code {
-
-        private static readonly String baseURL = "https://localhost:5001/Show/";
-
-        private List<Show> documentaries;
-
-        protected override async Task OnInitializedAsync()
-        {
-            documentaries = await Http.GetFromJsonAsync<List<Show>>(baseURL + "alldocumentaries");
-        }
-
-    }
+}

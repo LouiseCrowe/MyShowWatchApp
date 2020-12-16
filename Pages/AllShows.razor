@@ -1,6 +1,5 @@
 ﻿@page "/allshows"
 @using MyShowWatch.Shared
-@using Microsoft.AspNetCore.Components
 @inject HttpClient Http
 @using System.Linq
 
@@ -46,13 +45,12 @@ else
         </tbody>
     </table>
 
-
     <h3>All shows I'm tracking</h3>
     <table class="table table-striped">
         <thead>
             <tr>
                 <th>Show Title</th>
-                <th></th>
+                <th>Details</th>
             </tr>
         </thead>
         <tbody>
@@ -74,7 +72,6 @@ else
 }
 
 @code {
-
 
     private List<Show> shows { get; set; }
 

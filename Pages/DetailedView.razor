@@ -1,6 +1,5 @@
 ﻿@page "/detailedview"
 @using MyShowWatch.Shared
-@using Microsoft.AspNetCore.Components
 @using Telerik.Blazor.Components
 @inject HttpClient Http
 
@@ -10,16 +9,14 @@
 </div>
 <br />
 
-
 <TelerikGrid Data="shows" Sortable="true" Pageable="true" FilterMode="GridFilterMode.FilterMenu">
     <GridColumns>
         <GridColumn Field="@nameof(Show.Title)"></GridColumn>
         <GridColumn Field="@nameof(Show.ShowType)" Title="Show Type"></GridColumn>
-        <GridColumn Field="@nameof(Show.Status)"></GridColumn>
-        <GridColumn Field="@nameof(Show.ReleaseDate)" Title="Release Date"></GridColumn>
-        <GridColumn Field="@nameof(Show.IsWatched)" Title="Watched it?"></GridColumn>
-        <GridColumn Field="@nameof(Show.ShowComplete)" Title="Still running?"></GridColumn>
-        <GridColumn Field="@nameof(Show.IsKidFriendly)" Title="For the kids?"></GridColumn>
+        <GridColumn Field="@nameof(Show.Availability)"></GridColumn>
+        <GridColumn Field="@nameof(Show.WatchStatus)" Title="Watched it?"></GridColumn>
+        <GridColumn Field="@nameof(Show.RunningStatus)" Title="Still running?"></GridColumn>
+        <GridColumn Field="@nameof(Show.AgeRating)" Title="For kids?"></GridColumn>
     </GridColumns>
 </TelerikGrid>
 
