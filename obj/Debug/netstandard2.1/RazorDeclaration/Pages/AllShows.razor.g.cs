@@ -111,7 +111,7 @@ using System.Linq;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 74 "C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\Pages\AllShows.razor"
+#line 78 "C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\Pages\AllShows.razor"
        
 
     private List<Show> shows { get; set; }

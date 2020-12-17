@@ -108,13 +108,11 @@ using Telerik.Blazor.Components;
 #line 23 "C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\Pages\DetailedView.razor"
        
 
-
     private List<Show> shows { get; set; }
-
-    //private int numTvShows, numMovies, numDocumentaries;
 
     private static readonly String baseURL = "https://localhost:5001/Show/";
 
+    // Calling back all shows to populate detailed grid
     protected override async Task OnInitializedAsync()
     {
         shows = await Http.GetFromJsonAsync<List<Show>>(baseURL + "all");

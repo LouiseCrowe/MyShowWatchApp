@@ -646,7 +646,6 @@ C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\obj\Debug\netstandard2.1\RazorDecla
 C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\obj\Debug\netstandard2.1\RazorDeclaration\Pages\DetailedView.razor.g.cs
 C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\obj\Debug\netstandard2.1\RazorDeclaration\Pages\Index.razor.g.cs
 C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\obj\Debug\netstandard2.1\RazorDeclaration\Pages\ShowDetail.razor.g.cs
-C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\obj\Debug\netstandard2.1\RazorDeclaration\Shared\AdvancedSearch.razor.g.cs
 C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\obj\Debug\netstandard2.1\RazorDeclaration\Shared\MainLayout.razor.g.cs
 C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\obj\Debug\netstandard2.1\RazorDeclaration\Shared\NavMenu.razor.g.cs
 C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\obj\Debug\netstandard2.1\RazorDeclaration\Shared\SearchForTitle.razor.g.cs
@@ -665,7 +664,6 @@ C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\obj\Debug\netstandard2.1\Razor\Page
 C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\obj\Debug\netstandard2.1\Razor\Pages\DetailedView.razor.g.cs
 C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\obj\Debug\netstandard2.1\Razor\Pages\Index.razor.g.cs
 C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\obj\Debug\netstandard2.1\Razor\Pages\ShowDetail.razor.g.cs
-C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\obj\Debug\netstandard2.1\Razor\Shared\AdvancedSearch.razor.g.cs
 C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\obj\Debug\netstandard2.1\Razor\Shared\MainLayout.razor.g.cs
 C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\obj\Debug\netstandard2.1\Razor\Shared\NavMenu.razor.g.cs
 C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\obj\Debug\netstandard2.1\Razor\Shared\SearchForTitle.razor.g.cs
@@ -879,8 +877,8 @@ C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\obj\Debug\netstandard2.1\MyShowWatc
 C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\obj\Debug\netstandard2.1\MyShowWatch.Client.csproj.CopyComplete
 C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\obj\Debug\netstandard2.1\MyShowWatch.Client.dll
 C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\obj\Debug\netstandard2.1\MyShowWatch.Client.pdb
-C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\obj\Debug\netstandard2.1\integrity\sObBBKEF5na8ow8HKM0uMGaO2hSvAGAy1SUaKJ0ydwQ=.hash
-C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\obj\Debug\netstandard2.1\integrity\N1unfb6aO0HZ3s1xuAiB73oDeThdLTmE1mrrPX6k1a8=.hash
-C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\obj\Debug\netstandard2.1\integrity\7RV1ip3MeaMHDbfAH2PK6PFrs8sI6gQ44ITwYloddOk=.hash
-C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\obj\Debug\netstandard2.1\integrity\orGMKxbp4e69t4uJvnsmd8ZnYIJV-_HnFIh_VqvQ3hg=.hash
-C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\obj\Debug\netstandard2.1\integrity\1f5FAGjFXUJdmLUwQ8IA42uQ_IHbPj1GdXLmGBCMgfc=.hash
+C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\obj\Debug\netstandard2.1\integrity\otVGhyj-y6zEHKwgUvQvhYpBTM1mJbp6lyFdooFJT9s=.hash
+C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\obj\Debug\netstandard2.1\integrity\d2rLolT9lfoEiO_hM86--E2GqxAK1HwirIGwn3RMv6A=.hash
+C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\obj\Debug\netstandard2.1\integrity\0SPROd_Qto_bBB1MyAQJJxjfSLpljwENmgQ1V8p3obU=.hash
+C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\obj\Debug\netstandard2.1\integrity\HBba3U0GwNDXAr5HwaK3J3stNn6begRnS7P90o8krJg=.hash
+C:\BLAZOR\CA3\MyShowWatch\MyShowWatch\Client\obj\Debug\netstandard2.1\integrity\XSzE2zUzQSRh7WAi6KND-_hNsk2FRfdtIvWLipamRwQ=.hash
